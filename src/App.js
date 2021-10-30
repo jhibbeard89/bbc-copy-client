@@ -24,6 +24,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setArticles(data);
+        console.log(data);
       });
   }, []);
 
