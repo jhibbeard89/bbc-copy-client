@@ -10,7 +10,7 @@ const ArticleBox = ({ article }) => {
       }}
     >
       <h2>{article.title}</h2>
-      <p>{article.subHeader}</p>
+      <p>{article.sub_header}</p>
       <p className="tag">World</p>
     </div>
   );

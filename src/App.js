@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import ArticleBox from "./components/ArticleBox";
@@ -6,10 +7,13 @@ function App() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/v1/articles")
-      .then((response) => response.json())
-      .then((data) => {
-        setArticles(data);
+    axios
+      .get("http://localhost:3001/api/v1/articles")
+      .then((response) => {
+        setArticles(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, []);
 
