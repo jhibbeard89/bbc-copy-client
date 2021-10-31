@@ -11,7 +11,7 @@ const ArticleBox = ({ article }) => {
     >
       <h2>{article.title}</h2>
       <p>{article.sub_header}</p>
-      <p className="tag">World</p>
+      <p className="tag">{article.tag.tag_name}</p>
     </div>
   );
 };
