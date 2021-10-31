@@ -22,7 +22,11 @@ function App() {
     <ArticleBox key={article.id.toString()} article={article} />
   ));
 
-  return <div className="App">{articlesList}</div>;
+  return (
+    <div className="App">
+      <div className="newsContainer">{articlesList}</div>
+    </div>
+  );
 }
 
 export default App;
