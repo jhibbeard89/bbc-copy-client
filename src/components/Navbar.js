@@ -5,8 +5,19 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import NavbarMore from './NavbarMore';
+
+
+
+
+const expand = () => {
+  const navbar = document.querySelector(".navbar")
+  navbar.classList.toggle("navbar_invert")
+
+}
 
 const Navbar = () => {
+
   return(
     <div className="navbar">
       <div className="navbar_center">
@@ -23,7 +34,7 @@ const Navbar = () => {
             <li><Link to="#">Future</Link></li>
             <li><Link to="#">Culture</Link></li>
             {/* Dumme for Dropdown */}
-            <li><Link to="#">More</Link></li>
+            <li><Link to="#" onClick={expand}>More</Link></li>
           </Router>
         </ul>
       </div>
