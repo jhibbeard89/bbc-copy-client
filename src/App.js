@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import ArticleBox from "./components/ArticleBox";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <div className="newsContainer">{articlesList}</div>
     </div>
   );
