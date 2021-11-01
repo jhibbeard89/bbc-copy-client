@@ -38,6 +38,7 @@ const Navbar = () => {
           </Router>
         </ul>
       </div>
+      <NavbarMore />
     </div>
   )
 }
